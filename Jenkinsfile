@@ -1,14 +1,14 @@
-pipeline{
-agent any
-    tools{
+pipeline {
+ agent any
+    tools {
         maven 'maven'
         jdk 'java'
     } 
-stages{
+stages {
     stage('git clone') {
        steps {
-        echo "git clone"
-       git "https://github.com/rangareddy7/devops111.git"
+         echo 'git clone'
+         git 'https://github.com/rangareddy7/devops111.git'
         }
       }  
       stage('maven build') {
